@@ -23,7 +23,7 @@ export default function Home() {
             <Col className={styles.descripcion}>
               <h1>Nikhil Mishra</h1>
               <h2>Web Developer</h2>
-              <p>{"Hi there! I'm Nikhil, an enthusiastic web developer with 1.2 years of experience in front-end and back-end development. I specialize in HTML, CSS, JavaScript, and frameworks like React and Angular. I'm passionate about creating clean, dynamic, and user-centric websites, always aiming to enhance user experience and optimize performance. Let’s build something amazing together!"}</p>
+              <p>{"Hi there! I'm Nikhil, Front-End developer with expertise in HTML, CSS, JavaScript, and React. Skilled in crafting user-friendly web & mobile interfaces with React Native. Strong team collaborator with excellent interpersonal skills. Ready to bring fresh ideas to dynamic projects!"}</p>
               <div className={styles.icons}>
                 <Link href="https://www.linkedin.com/in/nikhil-mishra-664672180/" title="LinkedIn" target="_blank"><BsLinkedin /></Link>
                 <Link href="https://www.github.com/nikhil7476/" title="GitHub" target="_blank"><FaGithub /></Link>
