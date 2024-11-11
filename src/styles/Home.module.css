@@ -60,6 +60,10 @@
   transition: .3s;
 }
 
+.descripcion .icons a:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
 .image {
   display: flex;
   justify-content: center;
@@ -73,9 +77,12 @@
   text-align: center;
   object-fit: cover;
   object-position: center;
+  transition: .3s;
 }
 
-
+.image img:hover {
+  transform: translateY(-3px) scale(1.05);
+}
 
 @media (max-width: 576px) {
   .main {
