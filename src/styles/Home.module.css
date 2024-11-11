@@ -73,3 +73,55 @@
   object-fit: cover;
   object-position: center;
 }
+
+
+
+@media (max-width: 576px) {
+  .main {
+    height: 100vh;
+    padding: 0 15px;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(#12a89c, #024945);
+    width: 750px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .descripcion {
+    padding: 10px 20px 18px;
+  }
+
+  .descripcion h1 {
+    font-weight: 400;
+    font-size: 25px;
+  }
+
+  .descripcion h2 {
+    line-height: 2;
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  .descripcion p {
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .descripcion .icons {
+    margin-top: 18px;
+  }
+
+  .image {
+    padding: 15px 0 0;
+  }
+
+  .image img {
+    width: 90px;
+    height: 90px;
+  }
+
+}
