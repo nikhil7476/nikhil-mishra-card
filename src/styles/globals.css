@@ -35,6 +35,14 @@ a {
   text-decoration: none;
 }
 
+
+/*Link Outline*/
+a:active,
+a:focus {
+  outline: 0 !important;
+  border: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
