@@ -47,20 +47,23 @@
   text-align: justify;
 }
 
-.descripcion .icons {
+.descripcion .icons,
+.image .icons {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
 
-.descripcion .icons a {
+.descripcion .icons a,
+.image .icons a {
   color: #fff;
   font-size: 30px;
   transition: .3s;
 }
 
-.descripcion .icons a:hover {
+.descripcion .icons a:hover,
+.image .icons a:hover {
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -68,6 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .image img {
