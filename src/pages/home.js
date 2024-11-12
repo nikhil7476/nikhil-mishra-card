@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Col, Container, Row, Form, Button, InputGroup } from "react-bootstrap";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 import ImageSlider from "@/components/ImageSlider";
 
 
@@ -25,6 +26,19 @@ export default function Home() {
           <Row>
             <Col>
               <ImageSlider />
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col className="col-md-10">
+              <Row>
+                <Col className="col-md-6">
+                  <h2>Building an adaptive design system for Archlight</h2>
+                </Col>
+                <Col className="col-md-6">
+                  <p>In this project, I developed a flexible and scalable design system using Next.js for front-end development and Figma for design collaboration.</p>
+                  <Link href="#" title='Read More'>Read Case Study <IoIosArrowForward /></Link>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

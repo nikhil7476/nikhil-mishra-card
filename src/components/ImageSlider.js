@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '@/styles/slider.module.css';
+import Link from 'next/link';
 
 const ImageSlider = () => {
   const [index, setIndex] = useState(0);

@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #fff !important;
   text-decoration: none !important;
 }
 
