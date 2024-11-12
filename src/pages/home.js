@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Col, Container, Row, Form, Button, InputGroup } from "react-bootstrap";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+import ImageSlider from "@/components/ImageSlider";
 
 
 export default function Home() {
@@ -15,6 +16,15 @@ export default function Home() {
               <h1>Design Engineer & Builder</h1>
               <p>{"I'm Nikhil, a design engineer at FLY, where I craft intuitive user experiences. After hours, I build my own projects."}</p>
               <Link href="/about" title="About Me" className={styles.abtLnk}><Image src="/nikhil-mishra.jpg" alt="Nikhil_Mishra" title="Nikhil Mishra" width={25} height={25} />About Me <FaArrowRightFromBracket /></Link>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Row>
+            <Col>
+              <ImageSlider />
             </Col>
           </Row>
         </Container>

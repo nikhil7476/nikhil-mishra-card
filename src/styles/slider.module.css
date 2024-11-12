@@ -1,0 +1,41 @@
+.sliderContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.sliderContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #3f3f3f;
+}
+
+/* Container for pagination lines */
+.paginationContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    position: absolute;
+    bottom: -20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Style for each pagination line */
+.paginationLine {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the active line that fills up progressively */
+.activePaginationLine {
+    background-color: #007bff;
+    transition: width 0.1s linear;
+}
