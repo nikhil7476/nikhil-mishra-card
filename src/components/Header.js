@@ -13,10 +13,10 @@ import { IoGrid } from "react-icons/io5";
 export default function Header() {
 
     const {
-        seconds,
         minutes,
         hours,
-    } = useTime({ format: '24-hour' });
+        ampm,
+    } = useTime({ format: '12-hour' });
 
     // State to track whether the component is mounted (client-side)
     const [isClient, setIsClient] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
                     </Col>
                     <Col className={`col-md-2 ${styles.time}`}>
                         <p>
-                            <FcAlarmClock /> <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+                            <FcAlarmClock /> <span>{hours}</span>:<span>{minutes} {ampm}</span>
                         </p>
                     </Col>
                 </Row>
