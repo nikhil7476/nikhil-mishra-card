@@ -21,8 +21,8 @@ export default function Home() {
       </section>
       <section className={styles.newsLetter}>
         <Container>
-          <Row>
-            <Col className={styles.news}>
+          <Row className="justify-content-center">
+            <Col className={`col-md-7 ${styles.news}`}>
               <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
               <p>I occasionally write about design, technology, and share<br />thoughts on the intersection of creativity & engineering.</p>
               <Form className={styles.signupForm}>
