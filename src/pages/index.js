@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Card.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaGlobe } from "react-icons/fa";
@@ -9,7 +9,7 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { LuFileDown } from "react-icons/lu";
 import { MdMarkEmailUnread } from "react-icons/md";
 
-export default function Home() {
+export default function Nikhil() {
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Web Develepor - Beyond Crativity" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <section>
+      <section className={styles.cardMain}>
         <Container className={styles.main}>
           <Row className={styles.cardContainer}>
             <Col className={styles.descripcion}>
@@ -28,7 +28,7 @@ export default function Home() {
                 <Link href="https://www.linkedin.com/in/nikhil-mishra-664672180/" title="LinkedIn" target="_blank"><BsLinkedin /></Link>
                 <Link href="https://www.github.com/nikhil7476/" title="GitHub" target="_blank"><FaGithub /></Link>
                 <Link href="/Nikhil-Mishra-Resume.pdf" title="Resume" target="_blank"><LuFileDown /></Link>
-                <Link href="#" title="Website"><FaGlobe /></Link>
+                <Link href="/home" title="Website"><FaGlobe /></Link>
               </div>
             </Col>
             <Col className={styles.image}>
