@@ -1,0 +1,28 @@
+.ftrMain {
+    padding: 10px 0px;
+}
+
+.copy {
+    align-content: center;
+}
+
+.copy p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.copy p span {
+color: #ff0000;
+}
+
+.socio {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.socio a {
+    color: #fff;
+    font-size: 16px;
+}

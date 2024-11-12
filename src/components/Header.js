@@ -2,14 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTime } from 'react-timer-hook';
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Nav, Navbar } from "react-bootstrap";
 import styles from "@/styles/Header.module.css";
 import Link from 'next/link';
 import { FaHome, FaRegUserCircle } from "react-icons/fa";
 import { FaBookBookmark, FaPhoneVolume } from "react-icons/fa6";
+import { FcAlarmClock } from "react-icons/fc";
 import { IoGrid } from "react-icons/io5";
 
 export default function Header() {
+
     const {
         seconds,
         minutes,
@@ -34,21 +36,21 @@ export default function Header() {
             <Container>
                 <Row>
                     <Col className={`col-md-2 ${styles.logo}`}>
-                        <h1><Link href="/" title='Nikhil Mishra'>Nikhil Mishra</Link></h1>
+                        <Link href="/" title='Nikhil Mishra'>Nikhil Mishra</Link>
                     </Col>
                     <Col className={`col-md-8 ${styles.navs}`}>
-                        <div className={styles.navLnk}>
-                            <Link href="/home" title='Home'><FaHome /> Home</Link>
-                            <Link href="/about" title='About'><FaRegUserCircle /> About</Link>
-                            <Link href="/work" title='Work'><IoGrid /> Work</Link>
-                            <Link href="/blog" title='Blog'><FaBookBookmark /> Blog</Link>
-                            <Link href="/contact" title='Contact'><FaPhoneVolume /> Contact</Link>
+                        <div className={styles.navLnks}>
+                            <Link href="/home" title="Home"><FaHome /> Home</Link>
+                            <Link href="/about" title="About"><FaRegUserCircle /> About</Link>
+                            <Link href="/work" title="Work"><IoGrid /> Work</Link>
+                            <Link href="/blog" title="Blog"><FaBookBookmark /> Blog</Link>
+                            <Link href="/contact" title="Contact"><FaPhoneVolume /> Contact</Link>
                         </div>
                     </Col>
                     <Col className={`col-md-2 ${styles.time}`}>
-                        <div>
-                            <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
-                        </div>
+                        <p>
+                            <FcAlarmClock /> <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+                        </p>
                     </Col>
                 </Row>
             </Container>

@@ -1,7 +1,7 @@
-.hdrMain{
+.hdrMain {
     display: flex;
     justify-content: center;
-    padding: 5px 0px;
+    padding: 10px 0px;
     height: fit-content;
     position: sticky;
     top: 0;
@@ -9,13 +9,16 @@
 }
 
 .logo {
+    text-align: start;
     align-content: center;
 }
 
-.logo h1 {
-font-size: 20px;
-text-align: center;
-margin-bottom: 0;
+.logo a {
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    font-style: italic;
+    padding: 5px;
 }
 
 .navs {
@@ -24,29 +27,38 @@ margin-bottom: 0;
     align-items: center;
 }
 
-.navLnk {
+.navLnks {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    background-color: #0000004d;
-    backdrop-filter: blur(1rem);
-    border: 1px solid #3f3f3f;
-    border-radius: 1rem;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #fff;
     padding: 5px 10px;
 }
 
-.navLnk a {
-    font-size: 16px;
-    color: #fff;
-    align-items: center;
+.navLnks a {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 5px;
+    padding: 2px;
+    color: #fff;
+    font-size: 20px;
 }
 
-.navLnk a:active {
+.navLnks a:hover {
     background-color: #9595954d;
-    border: 1px solid #9595954d;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.75rem;
+}
+
+.time {
+    display: flex;
+    justify-content: end;    
+    align-items: center;
+}
+
+.time p {
+    font-size: 24px;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 0;
 }
