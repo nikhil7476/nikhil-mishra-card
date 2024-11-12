@@ -8,7 +8,7 @@ import { FaArrowRightFromBracket } from "react-icons/fa6";
 export default function Home() {
   return (
     <>
-      <section>
+      <section className={styles.banner}>
         <Container>
           <Row>
             <Col className="col-md-7">
