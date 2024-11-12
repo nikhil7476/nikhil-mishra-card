@@ -1,5 +1,6 @@
 .ftrMain {
     padding: 20px 0px;
+    border-top: 1px solid #3f3f3f;
 }
 
 .copy {
@@ -13,7 +14,7 @@
 }
 
 .copy p span {
-color: #ff0000;
+    color: #ff0000;
 }
 
 .socio {

@@ -31,28 +31,25 @@
     gap: 20px;
 }
  
-.emailInput:active, .emailInput:focus {
-    color: #fff;
-    box-shadow: none;
-    border-color: #3f3f3f;
-    background-color: transparent;
+.emailInput, .emailInput:active, .emailInput:focus {
+    color: #fff !important;
+    box-shadow: none !important;
+    border-color: #3f3f3f !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
 }
 
 .emailInput {
-    background-color: transparent;
-    color: #fff;
-    border-color: #3f3f3f;
-    border-radius: 0;
     margin-right: 10px;
     height: 40px;
 }
 
 .emailInput::placeholder {
-    color: #fff;
+    color: #fff !important;
 }
 
 .signupButton {
-    border-radius: 0;
-    border: none;
+    border-radius: 0 !important;
+    border: none !important;
     height: 40px;
 }

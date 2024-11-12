@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     z-index: 9;
+    border-bottom: 1px solid #3f3f3f;
 }
 
 .logo {
