@@ -12,7 +12,7 @@ export const blogPosts = [
       From my first coding experience to mastering frameworks and languages, every step has been rewarding. Each project has taught me something valuable, shaping me into the developer I am today. 
       Moving forward, I’m eager to keep pushing boundaries and take on more complex projects that merge creativity and functionality. This milestone isn’t the end; it’s just the beginning of new possibilities.
     `,
-    image: "https://via.placeholder.com/600x400?text=Career+Milestone",
+    image: "/blog1.jpg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const blogPosts = [
       never make it to the market. Today, I reflect on this “99%,” as I call it – the hidden innovations. While they might never see the light of day, they are critical for pushing the boundaries 
       of creativity and inspiring future projects. Acknowledging the “99%” helps us appreciate the development process, filled with untapped creativity.
     `,
-    image: "https://via.placeholder.com/600x400?text=Unrealized+Potential",
+    image: "/blog2.jpg",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const blogPosts = [
       Should AI be allowed in areas requiring deep empathy, like counseling or healthcare? How do we ensure algorithms don’t perpetuate existing biases? These are tough questions for today’s tech 
       community. While AI offers great potential, it's essential we handle it responsibly to avoid long-term societal issues. Navigating this ethical terrain is as challenging as developing AI itself.
     `,
-    image: "https://via.placeholder.com/600x400?text=Ethics+of+AI",
+    image: "/blog3.jpg",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ export const blogPosts = [
       is ideal for handling complex applications. Languages like JavaScript and Python are incorporating more functional aspects, with JavaScript’s map, reduce, and filter methods being a few examples. 
       As applications become more data-intensive, the predictability and scalability of functional programming make it a strong choice for modern development.
     `,
-    image: "https://via.placeholder.com/600x400?text=Functional+Programming",
+    image: "/blog4.jpg",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ export const blogPosts = [
       emphasizes user autonomy and data ownership. With decentralized applications (dApps) and blockchain at its core, users can control their data and interact with online services without intermediaries. 
       While still emerging, Web 3.0 holds great promise for transforming industries such as finance, healthcare, and content creation.
     `,
-    image: "https://via.placeholder.com/600x400?text=Web+3.0+Future",
+    image: "/blog5.jpg",
   },
   {
     id: 6,
@@ -87,6 +87,6 @@ export const blogPosts = [
       whether inside or outside the network, is trusted by default. Every request is verified, minimizing vulnerabilities from compromised accounts. This model is increasingly popular for remote work 
       and cloud-based environments. Zero Trust emphasizes identity verification, secure access, and minimizing access privileges, making it a powerful strategy for modern cybersecurity.
     `,
-    image: "https://via.placeholder.com/600x400?text=Zero+Trust+Security",
+    image: "/blog6.jpg",
   },
 ];
