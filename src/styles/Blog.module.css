@@ -1,0 +1,19 @@
+/* src/styles/blog.module.css */
+
+.blogList {
+    list-style: none;
+    padding: 0;
+}
+
+.blogItem {
+    margin-bottom: 20px;
+}
+
+.blogItem h2 {
+    font-size: 1.5rem;
+}
+
+.blogItem a {
+    color: blue;
+    text-decoration: underline;
+}
