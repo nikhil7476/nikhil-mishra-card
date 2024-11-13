@@ -1,14 +1,38 @@
-import styles from "@/styles/Home.module.css";
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import { Col, Container, Row, Form, Button, InputGroup } from "react-bootstrap";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
+import styles from "@/styles/Home.module.css";
 import ImageSlider from "@/components/ImageSlider";
 import { blogPosts } from "@/utils/dummyData";
 
 export default function Home() {
+
+  const [email, setEmail] = useState('');
+  const [emails, setEmails] = useState([]);
+  const [status, setStatus] = useState('');
+  const router = useRouter(); // Use Next.js router
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus('');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(email)) {
+      const updatedEmails = [...emails, email];
+      setEmails(updatedEmails);
+      localStorage.setItem('emails', JSON.stringify(updatedEmails)); // Store emails in local storage
+      setStatus('success');
+      setEmail('');
+    } else {
+      setStatus('error');
+    }
+  };
+
   return (
     <>
       <Head>
@@ -70,7 +94,7 @@ export default function Home() {
           </Row>
         </Container>
       </section>
-      <section className={styles.newsLetter}>
+      {/* <section className={styles.newsLetter}>
         <Container>
           <Row className="justify-content-center">
             <Col className={`col-md-7 ${styles.news}`}>
@@ -90,6 +114,35 @@ export default function Home() {
                   </Button>
                 </InputGroup>
               </Form>
+            </Col>
+          </Row>
+        </Container>
+      </section> */}
+      <section className={styles.newsLetter}>
+        <Container>
+          <Row className="justify-content-center">
+            <Col className={`col-md-7 ${styles.news}`}>
+              <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
+              <p>I occasionally write about design, technology, and share<br />thoughts on the intersection of creativity & engineering.</p>
+
+              <Form className={styles.signupForm} onSubmit={handleSubmit}>
+                <InputGroup>
+                  <Form.Control
+                    type="email"
+                    placeholder="Email Address"
+                    aria-label="Email"
+                    className={styles.emailInput}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <Button variant="light" type="submit" className={styles.signupButton}>
+                    Sign up
+                  </Button>
+                </InputGroup>
+              </Form>
+              {status === 'success' && <p className={styles.successMessage}>Thanks for subscribing!</p>}
+              {status === 'error' && <p className={styles.errorMessage}>Please enter a valid email address.</p>}
             </Col>
           </Row>
         </Container>
