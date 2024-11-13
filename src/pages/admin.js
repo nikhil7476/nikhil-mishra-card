@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Table, Button, Container } from 'react-bootstrap';
+import styles from "@/styles/Admin.module.css";
 
 const Admin = () => {
     const [emailList, setEmailList] = useState([]);
@@ -21,40 +22,44 @@ const Admin = () => {
     };
 
     return (
-        <Container className="mt-5">
-            <h2>Submitted Emails</h2>
-            {emailList.length > 0 ? (
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Email Address</th>
-                            <th>Date of Subscription</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {emailList.map((entry, index) => (
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{entry.email}</td>
-                                <td>{new Date(entry.date).toLocaleString()}</td> {/* Format the date */}
-                                <td>
-                                    <Button
-                                        variant="danger"
-                                        onClick={() => handleDelete(index)} // Call delete function
-                                    >
-                                        Delete
-                                    </Button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </Table>
-            ) : (
-                <p>No emails submitted yet.</p>
-            )}
-        </Container>
+        <>
+            <section className={styles.adminMain}>
+                <Container className="mt-5">
+                    <h2>Submitted Emails</h2>
+                    {emailList.length > 0 ? (
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Email Address</th>
+                                    <th>Date of Subscription</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {emailList.map((entry, index) => (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>{entry.email}</td>
+                                        <td>{new Date(entry.date).toLocaleString()}</td> {/* Format the date */}
+                                        <td>
+                                            <Button
+                                                variant="danger"
+                                                onClick={() => handleDelete(index)} // Call delete function
+                                            >
+                                                Delete
+                                            </Button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </Table>
+                    ) : (
+                        <p>No emails submitted yet.</p>
+                    )}
+                </Container>
+            </section>
+        </>
     );
 };
 
