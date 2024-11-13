@@ -1,6 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { Col, Container, Row, Form, Button, InputGroup } from "react-bootstrap";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,6 +11,11 @@ import { blogPosts } from "@/utils/dummyData";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Nikhil Mishra</title>
+        <meta name="description" content="Web Develepor - Beyond Crativity" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <section className={styles.banner}>
         <Container>
           <Row>
