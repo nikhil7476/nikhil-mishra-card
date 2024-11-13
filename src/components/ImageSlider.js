@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '@/styles/slider.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ImageSlider = () => {
   const [index, setIndex] = useState(0);
@@ -40,22 +41,22 @@ const ImageSlider = () => {
       >
         <Carousel.Item>
           <div onClick={() => handleSelect(1)}>
-            <img className="d-block w-100" src="/cover-01.webp" alt="Slide 1" title='Slide 1' />
+            <Image className="d-block w-100" src="/cover-01.webp" alt="Slide 1" title='Slide 1' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(2)}>
-            <img className="d-block w-100" src="/cover-02.webp" alt="Slide 2" title='Slide 2' />
+            <Image className="d-block w-100" src="/cover-02.webp" alt="Slide 2" title='Slide 2' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(3)}>
-            <img className="d-block w-100" src="/cover-03.webp" alt="Slide 3" title='Slide 3' />
+            <Image className="d-block w-100" src="/cover-03.webp" alt="Slide 3" title='Slide 3' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(0)}>
-            <img className="d-block w-100" src="/cover-04.webp" alt="Slide 4" title='Slide 4' />
+            <Image className="d-block w-100" src="/cover-04.webp" alt="Slide 4" title='Slide 4' width={100} height={100} />
           </div>
         </Carousel.Item>
       </Carousel>

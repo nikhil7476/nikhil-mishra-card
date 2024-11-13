@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts } from "@/utils/dummyData"; // Assuming blogPosts are imported from a separate file
 import styles from "@/styles/Blog.module.css";
 
@@ -13,7 +14,7 @@ const BlogPage = () => {
 
             {/* Latest Post */}
             <div className={styles.latestPost}>
-                <img src={latestPost.image} alt={latestPost.title} className={styles.featuredImage} />
+                <Image src={latestPost.image} alt={latestPost.title} className={styles.featuredImage} width={100} height={100} />
                 <div className={styles.latestPostContent}>
                     <Link href={`/blog/${encodeURIComponent(latestPost.slug)}`}>
                         <h2 className={styles.postTitle}>{latestPost.title}</h2>
