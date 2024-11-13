@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Table, Button, Container } from 'react-bootstrap';
 
-const Newsletter = () => {
+const Admin = () => {
     const [emailList, setEmailList] = useState([]);
 
     useEffect(() => {
@@ -58,4 +58,4 @@ const Newsletter = () => {
     );
 };
 
-export default Newsletter;
+export default Admin;
