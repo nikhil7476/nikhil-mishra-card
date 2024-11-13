@@ -23,9 +23,19 @@ export default function Home() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailRegex.test(email)) {
-      const updatedEmails = [...emails, email];
+      // Get the current emails stored in local storage
+      const storedEmails = JSON.parse(localStorage.getItem('emails')) || [];
+
+      // Get the current date in ISO format
+      const currentDate = new Date().toISOString();
+
+      // Add the new email and date to the list
+      const updatedEmails = [...storedEmails, { email, date: currentDate }];
+
+      // Update the emails state and store the new list in local storage
       setEmails(updatedEmails);
-      localStorage.setItem('emails', JSON.stringify(updatedEmails)); // Store emails in local storage
+      localStorage.setItem('emails', JSON.stringify(updatedEmails));
+
       setStatus('success');
       setEmail('');
     } else {
