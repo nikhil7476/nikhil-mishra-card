@@ -53,6 +53,11 @@ section {
   }
 }
 
+/*Login Popup*/
+button.btn-close {
+  display: none !important;
+}
+
 /* .container {
   width: 1300px !important;
   max-width: 1300px !important;

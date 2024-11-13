@@ -1,3 +1,95 @@
 .adminMain {
-    padding: 60px 0px;
+    padding: 120px 0px 60px 0px !important;
+}
+
+.adminHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminMain h2 {
+    color: #fff;
+}
+
+/* Modal Styling */
+.loginModal .modal-dialog {
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.modalHeader {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 2px solid #0056b3;
+}
+
+.modalBody {
+    padding: 20px;
+}
+
+.inputField {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.errorText {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
+}
+
+.adminMain {
+    padding: 20px;
+}
+
+.back {
+    color: #000 !important;
+    text-align: center !important;
+    text-decoration: underline !important;
+    margin: 10px 0px !important;
+}
+
+/* Title Class */
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttonLogout {
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.tableContainer {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.tableHeading {
+    background-color: #007bff;
+    color: white;
+}
+
+.tableData {
+    padding: 15px;
+}
+
+.tableActions {
+    padding: 15px;
 }
