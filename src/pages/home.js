@@ -19,7 +19,7 @@ export default function Home() {
               <Link href="/about" title="About Me" className={styles.abtLnk}><Image src="/nikhil-mishra.jpg" alt="Nikhil_Mishra" title="Nikhil Mishra" width={25} height={25} />About Me <FaArrowRightFromBracket /></Link>
             </Col>
             <Col className={`col-md-5 ${styles.nmLogo}`}>
-              <Image src="/nikhil-logo.jpeg" alt="Nikhil-Logo" title="Nikhil" width={100} height={100} />
+              <Image src="/nikhil-logo.jpeg" alt="Nikhil-Logo" title="Nikhil Mishra" width={100} height={100} />
             </Col>
           </Row>
         </Container>
