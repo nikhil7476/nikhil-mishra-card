@@ -13,63 +13,46 @@ import { blogPosts } from "@/utils/dummyData";
 export default function Home() {
 
   const [email, setEmail] = useState('');
-  const [emails, setEmails] = useState([]);
   const [status, setStatus] = useState('');
-  const router = useRouter(); // Use Next.js router
+  const router = useRouter();
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setStatus('');
-  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  //   if (emailRegex.test(email)) {
-  //     // Get the current emails stored in local storage
-  //     const storedEmails = JSON.parse(localStorage.getItem('emails')) || [];
-
-  //     // Get the current date in ISO format
-  //     const currentDate = new Date().toISOString();
-
-  //     // Add the new email and date to the list
-  //     const updatedEmails = [...storedEmails, { email, date: currentDate }];
-
-  //     // Update the emails state and store the new list in local storage
-  //     setEmails(updatedEmails);
-  //     localStorage.setItem('emails', JSON.stringify(updatedEmails));
-
-  //     setStatus('success');
-  //     setEmail('');
-  //   } else {
-  //     setStatus('error');
-  //   }
-  // };
-
+  // The handleSubmit function, which is invoked when the form is submitted.
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();  // Prevent form submission (default behavior)
+
+    // Clear previous status messages
     setStatus('');
+
+    // Define the email regex to validate the email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (emailRegex.test(email)) {
+    // Trim the email to avoid leading/trailing spaces
+    const trimmedEmail = email.trim();
+
+    // Check if the email matches the regex pattern
+    if (emailRegex.test(trimmedEmail)) {
       try {
+        // Send the email data to your API
         const response = await fetch('/api/emails', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ email: trimmedEmail }),  // Send trimmed email
         });
 
         if (response.ok) {
-          setStatus('success');
-          setEmail('');
+          setStatus('success'); // Set success message
+          setEmail('');  // Reset email input
         } else {
-          setStatus('error');
+          setStatus('error');  // Handle error case
         }
       } catch (error) {
         console.error('Error submitting email:', error);
         setStatus('error');
       }
     } else {
-      setStatus('error');
+      setStatus('error');  // Invalid email format
     }
   };
 
@@ -77,7 +60,7 @@ export default function Home() {
     <>
       <Head>
         <title>Nikhil Mishra</title>
-        <meta name="description" content="Web Develepor - Beyond Crativity" />
+        <meta name="description" content="Web Developer - Beyond Creativity" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <section className={styles.banner}>
@@ -134,30 +117,6 @@ export default function Home() {
           </Row>
         </Container>
       </section>
-      {/* <section className={styles.newsLetter}>
-        <Container>
-          <Row className="justify-content-center">
-            <Col className={`col-md-7 ${styles.news}`}>
-              <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
-              <p>I occasionally write about design, technology, and share<br />thoughts on the intersection of creativity & engineering.</p>
-              <Form className={styles.signupForm}>
-                <InputGroup>
-                  <Form.Control
-                    type="email"
-                    placeholder="Email Address"
-                    aria-label="Email"
-                    className={styles.emailInput}
-                    required
-                  />
-                  <Button variant="light" type="submit" className={styles.signupButton}>
-                    Sign up
-                  </Button>
-                </InputGroup>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
       <section className={styles.newsLetter}>
         <Container>
           <Row className="justify-content-center">
@@ -173,7 +132,7 @@ export default function Home() {
                     aria-label="Email"
                     className={styles.emailInput}
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}  // Handle input change
                     required
                   />
                   <Button variant="light" type="submit" className={styles.signupButton}>
@@ -181,6 +140,8 @@ export default function Home() {
                   </Button>
                 </InputGroup>
               </Form>
+
+              {/* Display status messages */}
               {status === 'success' && <p className={styles.successMessage}>Thanks for subscribing!</p>}
               {status === 'error' && <p className={styles.errorMessage}>Please enter a valid email address.</p>}
             </Col>
