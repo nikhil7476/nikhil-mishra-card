@@ -1,0 +1,47 @@
+/*Contact Section*/
+.form {
+    margin-top: 20px;
+}
+
+.formControl {
+    margin-bottom: 15px;
+}
+
+.formControl,
+.formControl:active,
+.formControl:focus {
+    background-color: transparent !important;
+    border: 1px solid #3f3f3f !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+.formControl::placeholder {
+    color: #fff !important;
+}
+
+.submitButton {
+    margin-top: 10px;    
+    color: #fff;
+    background-color: transparent !important;
+    padding: 5px 10px;
+    width: fit-content;
+    border: 1px solid #3f3f3f !important;
+    border-radius: 0 !important;
+    box-shadow: inset 0 0 #0000;
+}
+
+.contactInfo {
+    text-align: center;
+    padding: 20px;
+}
+
+.contactInfo h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contactInfo p {
+    margin-top: 5px;
+}
