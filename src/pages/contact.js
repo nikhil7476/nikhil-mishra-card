@@ -5,6 +5,7 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "@/styles/Contact.module.css";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -21,14 +22,14 @@ export default function Contact() {
               <div className={styles.contactInfo}>
                 <FaEnvelope size={30} />
                 <h5>Email</h5>
-                <p>nikhil9027917476@gmail.com</p>
+                <p><Link href="mailto:nikhil9027917476@gmail.com<" title="nikhil9027917476@gmail.com<">nikhil9027917476@gmail.com</Link></p>
               </div>
             </Col>
             <Col md={4}>
               <div className={styles.contactInfo}>
                 <FaPhoneAlt size={30} />
                 <h5>Phone</h5>
-                <p>+91-9027917476, +91-7900677476</p>
+                <p><Link href="tel:+91-9027917476" title="+91-9027917476">+91-9027917476</Link>, <Link href="tel:+91-7900677476" title="+91-7900677476">+91-7900677476</Link></p>
               </div>
             </Col>
             <Col md={4}>
