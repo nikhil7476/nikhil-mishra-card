@@ -42,10 +42,7 @@ export default function Contact() {
           <Row>
             <Col md={6}>
               <h2>Contact Us</h2>
-              <p>
-                Feel free to reach out to us for any inquiries. We're here to
-                help!
-              </p>
+              <p>{"Feel free to reach out to us for any inquiries. We're here to help"}</p>
               {/* Contact Form */}
               <Form className={styles.form}>
                 <Form.Group controlId="formName">
