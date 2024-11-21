@@ -108,3 +108,36 @@
     border: none !important;
     height: 40px;
 }
+
+@media screen and (max-width: 520px) {
+    .bnrMain {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .banner h1 {
+        font-size: 45px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .caseRow,
+    .blogRow {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .caseStudy h2,
+    .blogs h2,
+    .news h2 {
+        font-size: 30px;
+    }
+
+    .news {
+        padding: 30px !important;
+    }
+}

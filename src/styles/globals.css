@@ -45,7 +45,8 @@ button.btn-close {
   display: none !important;
 }
 
-/* .container {
-  width: 1300px !important;
-  max-width: 1300px !important;
-} */
+@media screen and (max-width: 520px) {
+  section {
+    padding: 20px 10px;
+  }
+}

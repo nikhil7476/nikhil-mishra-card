@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <section className={styles.banner}>
         <Container>
-          <Row>
+          <Row className={styles.bnrMain}>
             <Col className="col-md-7">
               <h1>Design Engineer & Builder</h1>
               <p>{"I'm Nikhil, a web developer at Nextupgrad Web Solutions Pvt Ltd, where I craft intuitive user experiences. After hours, I build my own projects."}</p>
@@ -40,7 +40,7 @@ export default function Home() {
           </Row>
           <Row className="justify-content-center">
             <Col className="col-md-10">
-              <Row>
+              <Row className={styles.caseRow}>
                 <Col className="col-md-6">
                   <h2>Building an adaptive design system for Archlight</h2>
                 </Col>
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
       <section className={styles.blogs}>
         <Container>
-          <Row>
+          <Row className={styles.blogRow}>
             <Col className="col-md-4">
               <h2>Latest from<br />the blog</h2>
             </Col>
