@@ -10,10 +10,10 @@ const Admin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    useEffect(() => {
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-        setShowModal(isLoggedIn ? false : true);
-    }, []);
+    // useEffect(() => {
+    //     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    //     setShowModal(isLoggedIn ? false : true);
+    // }, []);
 
     const handleLogin = () => {
         if (username === 'nikhil@gmail.com' && password === 'Shivoham@24') {
@@ -29,17 +29,58 @@ const Admin = () => {
         setShowModal(true);
     };
 
+    // useEffect(() => {
+    //     const storedEmails = localStorage.getItem('emails');
+    //     if (storedEmails) {
+    //         setEmailList(JSON.parse(storedEmails));
+    //     }
+    // }, []);
+
+    // const handleDelete = (index) => {
+    //     const updatedEmails = emailList.filter((_, i) => i !== index);
+    //     localStorage.setItem('emails', JSON.stringify(updatedEmails));
+    //     setEmailList(updatedEmails);
+    // };
+
     useEffect(() => {
-        const storedEmails = localStorage.getItem('emails');
-        if (storedEmails) {
-            setEmailList(JSON.parse(storedEmails));
+        const fetchEmails = async () => {
+            try {
+                const response = await fetch('/api/emails');
+                if (response.ok) {
+                    const data = await response.json();
+                    setEmailList(data);
+                } else {
+                    console.error('Failed to fetch emails');
+                }
+            } catch (error) {
+                console.error('Error fetching emails:', error);
+            }
+        };
+
+        // Check login status
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        setShowModal(!isLoggedIn);
+
+        if (isLoggedIn) {
+            fetchEmails(); // Fetch emails on login
         }
     }, []);
 
-    const handleDelete = (index) => {
-        const updatedEmails = emailList.filter((_, i) => i !== index);
-        localStorage.setItem('emails', JSON.stringify(updatedEmails));
-        setEmailList(updatedEmails);
+    const handleDelete = async (index) => {
+        const emailToDelete = emailList[index];
+        try {
+            const response = await fetch(`/api/emails/${emailToDelete.id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setEmailList((prevEmails) => prevEmails.filter((_, i) => i !== index));
+            } else {
+                console.error('Failed to delete email');
+            }
+        } catch (error) {
+            console.error('Error deleting email:', error);
+        }
     };
 
     return (

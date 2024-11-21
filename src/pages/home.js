@@ -17,27 +17,57 @@ export default function Home() {
   const [status, setStatus] = useState('');
   const router = useRouter(); // Use Next.js router
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setStatus('');
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  //   if (emailRegex.test(email)) {
+  //     // Get the current emails stored in local storage
+  //     const storedEmails = JSON.parse(localStorage.getItem('emails')) || [];
+
+  //     // Get the current date in ISO format
+  //     const currentDate = new Date().toISOString();
+
+  //     // Add the new email and date to the list
+  //     const updatedEmails = [...storedEmails, { email, date: currentDate }];
+
+  //     // Update the emails state and store the new list in local storage
+  //     setEmails(updatedEmails);
+  //     localStorage.setItem('emails', JSON.stringify(updatedEmails));
+
+  //     setStatus('success');
+  //     setEmail('');
+  //   } else {
+  //     setStatus('error');
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailRegex.test(email)) {
-      // Get the current emails stored in local storage
-      const storedEmails = JSON.parse(localStorage.getItem('emails')) || [];
+      try {
+        const response = await fetch('/api/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
 
-      // Get the current date in ISO format
-      const currentDate = new Date().toISOString();
-
-      // Add the new email and date to the list
-      const updatedEmails = [...storedEmails, { email, date: currentDate }];
-
-      // Update the emails state and store the new list in local storage
-      setEmails(updatedEmails);
-      localStorage.setItem('emails', JSON.stringify(updatedEmails));
-
-      setStatus('success');
-      setEmail('');
+        if (response.ok) {
+          setStatus('success');
+          setEmail('');
+        } else {
+          setStatus('error');
+        }
+      } catch (error) {
+        console.error('Error submitting email:', error);
+        setStatus('error');
+      }
     } else {
       setStatus('error');
     }
