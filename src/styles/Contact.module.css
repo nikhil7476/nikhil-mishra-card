@@ -45,3 +45,11 @@
 .contactInfo p {
     margin-top: 5px;
 }
+
+@media screen and (max-width: 520px) {
+    .cMap {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

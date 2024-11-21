@@ -39,11 +39,10 @@ export default function Contact() {
               </div>
             </Col>
           </Row>
-          <Row>
+          <Row className={styles.cMap}>
             <Col md={6}>
               <h2>Contact Us</h2>
               <p>{"Feel free to reach out to us for any inquiries. We're here to help"}</p>
-              {/* Contact Form */}
               <Form className={styles.form}>
                 <Form.Group controlId="formName">
                   <Form.Label>Name</Form.Label>
@@ -54,7 +53,6 @@ export default function Contact() {
                     className={styles.formControl}
                   />
                 </Form.Group>
-
                 <Form.Group controlId="formEmail">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
@@ -64,7 +62,6 @@ export default function Contact() {
                     className={styles.formControl}
                   />
                 </Form.Group>
-
                 <Form.Group controlId="formMessage">
                   <Form.Label>Message</Form.Label>
                   <Form.Control
@@ -75,7 +72,6 @@ export default function Contact() {
                     className={styles.formControl}
                   />
                 </Form.Group>
-
                 <Button variant="primary" type="submit" className={styles.submitButton}>
                   Send Message <FaArrowRightFromBracket />
                 </Button>
