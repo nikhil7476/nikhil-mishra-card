@@ -54,7 +54,7 @@
 
 .time {
     display: flex;
-    justify-content: end;    
+    justify-content: end;
     align-items: center;
 }
 
@@ -63,4 +63,42 @@
     font-style: italic;
     padding: 5px;
     margin-bottom: 0;
+}
+
+
+/*mobile Header*/
+.mobHdr {
+    display: none !important;
+}
+
+.mobNav {
+    display: flex;
+    justify-content: center;
+}
+
+.navLnks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    border: 1px solid #3f3f3f;
+    backdrop-filter: blur(1.25rem);
+}
+
+@media screen and (max-width: 520px) {
+    .hdrRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobHdr {
+        display: block !important;
+    }
+
+    .time,
+    .navs {
+        display: none !important;
+    }
 }

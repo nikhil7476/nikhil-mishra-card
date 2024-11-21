@@ -34,7 +34,7 @@ export default function Header() {
     return (
         <div className={styles.hdrMain}>
             <Container>
-                <Row>
+                <Row className={styles.hdrRow}>
                     <Col className={`col-md-2 ${styles.logo}`}>
                         <Link href="/" title='Nikhil Mishra'>Nikhil Mishra</Link>
                     </Col>
@@ -51,6 +51,19 @@ export default function Header() {
                         <p>
                             <FcAlarmClock /> <span>{hours}</span>:<span>{minutes} {ampm}</span>
                         </p>
+                    </Col>
+                    <Col className='col-md-8'>
+                        <Row className={styles.mobHdr}>
+                            <Col className={styles.mobNav}>
+                                <div className={styles.navLnks}>
+                                    <Link href="/home" title="Home"><FaHome /></Link>
+                                    <Link href="/about" title="About"><FaRegUserCircle /></Link>
+                                    <Link href="/work" title="Work"><IoGrid /></Link>
+                                    <Link href="/blog" title="Blog"><FaBookBookmark /></Link>
+                                    <Link href="/contact" title="Contact"><FaPhoneVolume /></Link>
+                                </div>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>
