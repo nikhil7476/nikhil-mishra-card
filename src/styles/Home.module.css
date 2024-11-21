@@ -70,7 +70,7 @@
     background-color: #0000004d;
     backdrop-filter: blur(1rem);
     border: 1px solid #3f3f3f;
-    padding: 50px;
+    padding: 50px !important;
 }
 
 .news h2 {
