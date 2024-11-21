@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -12,55 +10,11 @@ import { blogPosts } from "@/utils/dummyData";
 
 export default function Home() {
 
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
-  const router = useRouter();
-
-  // The handleSubmit function, which is invoked when the form is submitted.
-  const handleSubmit = async (e) => {
-    e.preventDefault();  // Prevent form submission (default behavior)
-
-    // Clear previous status messages
-    setStatus('');
-
-    // Define the email regex to validate the email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Trim the email to avoid leading/trailing spaces
-    const trimmedEmail = email.trim();
-
-    // Check if the email matches the regex pattern
-    if (emailRegex.test(trimmedEmail)) {
-      try {
-        // Send the email data to your API
-        const response = await fetch('/api/emails', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email: trimmedEmail }),  // Send trimmed email
-        });
-
-        if (response.ok) {
-          setStatus('success'); // Set success message
-          setEmail('');  // Reset email input
-        } else {
-          setStatus('error');  // Handle error case
-        }
-      } catch (error) {
-        console.error('Error submitting email:', error);
-        setStatus('error');
-      }
-    } else {
-      setStatus('error');  // Invalid email format
-    }
-  };
-
   return (
     <>
       <Head>
         <title>Nikhil Mishra</title>
-        <meta name="description" content="Web Developer - Beyond Creativity" />
+        <meta name="description" content="Web Develepor - Beyond Crativity" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <section className={styles.banner}>
@@ -123,16 +77,13 @@ export default function Home() {
             <Col className={`col-md-7 ${styles.news}`}>
               <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
               <p>I occasionally write about design, technology, and share<br />thoughts on the intersection of creativity & engineering.</p>
-
-              <Form className={styles.signupForm} onSubmit={handleSubmit}>
+              <Form className={styles.signupForm}>
                 <InputGroup>
                   <Form.Control
                     type="email"
                     placeholder="Email Address"
                     aria-label="Email"
                     className={styles.emailInput}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}  // Handle input change
                     required
                   />
                   <Button variant="light" type="submit" className={styles.signupButton}>
@@ -140,10 +91,6 @@ export default function Home() {
                   </Button>
                 </InputGroup>
               </Form>
-
-              {/* Display status messages */}
-              {status === 'success' && <p className={styles.successMessage}>Thanks for subscribing!</p>}
-              {status === 'error' && <p className={styles.errorMessage}>Please enter a valid email address.</p>}
             </Col>
           </Row>
         </Container>
