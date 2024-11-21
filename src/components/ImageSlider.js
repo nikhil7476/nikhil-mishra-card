@@ -37,7 +37,8 @@ const ImageSlider = () => {
         indicators={false}
         controls={false} // Hides the navigation arrows
         interval={null}
-        wrap={true}
+        wrap={true} 
+        className={styles.slides}
       >
         <Carousel.Item>
           <div onClick={() => handleSelect(1)}>

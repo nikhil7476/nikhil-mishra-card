@@ -8,6 +8,11 @@
     cursor: pointer;
 }
 
+.sliderContainer .slides {
+    width: 100%;
+    height: auto;
+}
+
 .sliderContainer img {
     width: 100%;
     height: auto;
