@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "@/styles/Contact.module.css";
 import Link from "next/link";
 
@@ -88,15 +87,14 @@ export default function Contact() {
             <Col md={6}>
               <h2>Our Location</h2>
               <div style={{ height: "400px", width: "100%" }}>
-                <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-                  <GoogleMap
-                    mapContainerStyle={{ height: "100%", width: "100%" }}
-                    center={{ lat: 40.748817, lng: -73.985428 }}
-                    zoom={13}
-                  >
-                    <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
-                  </GoogleMap>
-                </LoadScript>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d197.2005048548882!2d79.31150607212938!3d26.559420525515897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1732205980791!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
               </div>
             </Col>
           </Row>
