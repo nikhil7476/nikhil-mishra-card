@@ -23,6 +23,10 @@ body {
   margin: 0;
 }
 
+p {
+  font-family: "Roboto Slab", serif !important;
+}
+
 a {
   color: #fff !important;
   text-decoration: none !important;
