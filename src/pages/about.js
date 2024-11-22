@@ -15,7 +15,7 @@ const About = () => {
             Front-End Developer | Creator of Interactive Digital Experiences
           </p>
           <div>
-            <Link className={styles.heroButton} href="/Resume.pdf" target="_blank">
+            <Link className={styles.heroButton} href="/Nikhil-Mishra-Resume.pdf" target="_blank">
               <FaDownload className="me-2" /> Download Resume
             </Link>
             <Link className={styles.heroButton} href="https://www.linkedin.com/in/nikhil-mishra-664672180/" target="_blank">
