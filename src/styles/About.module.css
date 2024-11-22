@@ -59,9 +59,9 @@
 }
 
 @media screen and (max-width: 520px) {
-   .abtRow {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-   }
+    .abtRow {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
