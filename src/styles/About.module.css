@@ -1,0 +1,57 @@
+/* Hero Section */
+.heroSection {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.heroButton {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* About Me Section */
+.profileImage {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.aboutText {
+    font-size: 1.1rem;
+    color: #d1d1d1;
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+.skillsSection {
+    text-align: center;
+}
+
+.skillCard {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.skillIcon {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contactSection {
+    padding: 4rem 0;
+    text-align: center;
+}
