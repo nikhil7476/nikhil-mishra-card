@@ -17,6 +17,7 @@
 .cardContainer {
     display: flex;
     width: 650px;
+    padding: 20px;
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #3f3f3f;
@@ -26,7 +27,6 @@
 
 .image,
 .descripcion {
-    padding: 30px;
     text-align: left;
     color: #fff;
 }
@@ -34,7 +34,6 @@
 .descripcion {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
