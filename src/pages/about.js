@@ -26,7 +26,7 @@ const About = () => {
       </section>
       <section className={styles.aboutMeSection}>
         <Container>
-          <Row>
+          <Row className={styles.abtRow}>
             <Col className="col-md-4">
               <img
                 src="/nikhil-mishra.jpg"

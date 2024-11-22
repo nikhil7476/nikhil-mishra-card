@@ -1,6 +1,6 @@
 /* Hero Section */
 .heroSection {
-    padding: 120px 0;
+    padding: 120px 0px 60px 0px;
     text-align: center;
 }
 
@@ -54,6 +54,13 @@
 
 /* Contact Section */
 .contactSection {
-    padding: 4rem 0;
     text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+   .abtRow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
 }
