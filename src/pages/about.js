@@ -4,6 +4,7 @@ import { FaLinkedin, FaDownload, FaEnvelope } from "react-icons/fa";
 import { SiJavascript, SiReact, SiAngular, SiCss3 } from "react-icons/si";
 import Link from "next/link";
 import styles from "@/styles/About.module.css";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -28,11 +29,7 @@ const About = () => {
         <Container>
           <Row className={styles.abtRow}>
             <Col className="col-md-4">
-              <img
-                src="/nikhil-mishra.jpg"
-                alt="Nikhil Mishra"
-                className={styles.profileImage}
-              />
+              <Image src="/nikhil-mishra.jpg" alt="Nikhil Mishra" title="Nikhil Mishra" className={styles.profileImage} width={100} height={100} />
             </Col>
             <Col className="col-md-8">
               <h2 className={styles.sectionTitle}>About Me</h2>
