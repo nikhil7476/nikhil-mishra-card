@@ -86,7 +86,7 @@ const About = () => {
             Ready to collaborate or discuss exciting ideas? Let’s connect and
             create something amazing!
           </p>
-          <Link className={styles.heroButton} href="mailto:nikhil@example.com">
+          <Link className={styles.heroButton} href="mailto:nikhil9027917476@gmail.com">
             <FaEnvelope className="me-2" /> Contact Me
           </Link>
         </Container>
