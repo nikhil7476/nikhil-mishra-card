@@ -21,7 +21,7 @@ export default function Nikhil() {
             <Col className={styles.descripcion}>
               <h1>Nikhil Mishra</h1>
               <p>{"Hi there ! I'm Nikhil, Front-End developer with expertise in HTML, CSS, JavaScript, and React. Skilled in crafting user-friendly web & mobile interfaces with React Native. Strong team collaborator with excellent interpersonal skills. Ready to bring fresh ideas to dynamic projects!"}</p>
-              <Link href="/home" title="Website" className={styles.webSite}>Welcome to My Portfolio <FaGlobe /></Link>
+              <Link href="/home" title="Website" className={styles.webSite}>Visit to My Portfolio <FaGlobe /></Link>
             </Col>
             <Col className={styles.image}>
               <Image src="/nikhil-logo.jpeg" alt="Nikhil-Mishra" title="Nikhil Mishra" width={100} height={100} />
