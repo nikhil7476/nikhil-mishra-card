@@ -1,5 +1,8 @@
 .cardMain {
-    background-color: #131516;
+    background-image: url("/card-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 0;
 }
 
@@ -8,7 +11,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Lato, sans-serif;
     padding: 0 25px;
 }
 
@@ -16,8 +18,9 @@
     display: flex;
     width: 650px;
     height: auto;
-    background: linear-gradient(to right, #024945, #12a89c);
-    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #3f3f3f;
+    border-radius: 0px;
     box-shadow: 1px 7px 10px 2px #00000026;
 }
 
@@ -39,16 +42,22 @@
     font-weight: 400;
 }
 
-.descripcion h2 {
-    line-height: 2;
-    font-weight: 500;
-    font-size: medium;
-}
-
 .descripcion p {
     font-weight: 300;
     font-size: 17px;
     text-align: justify;
+}
+
+.descripcion .webSite {
+    color: #fff;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #3f3f3f;
+    box-shadow: inset 0 0 #0000;
 }
 
 .descripcion .icons,
@@ -81,7 +90,8 @@
 .image img {
     width: 200px;
     height: 200px;
-    border-radius: 100%;
+    border: 1px solid #3f3f3f;
+    border-radius: 0;
     text-align: center;
     object-fit: cover;
     object-position: center;
