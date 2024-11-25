@@ -132,10 +132,9 @@ const About = () => {
       </section>
       <section className={styles.skillsSection}>
         <Container>
-          <h2>Skills</h2>
+          <h2>Technical & Professional Skills</h2>
           <Row>
             <Col className="col-md-6">
-              <h3>Technical Skills</h3>
               <Row>
                 <Col className={`col-md-4 ${styles.skillCard}`}>
                   <SiHtml5 className={styles.skillIcon} />
@@ -176,7 +175,6 @@ const About = () => {
               </Row>
             </Col>
             <Col className="col-md-6">
-              <h3>Professional Skills</h3>
               <Row>
                 <Col className={`col-md-4 ${styles.skillCard}`}>
                   <div className={styles.skillIconWrapper}>
