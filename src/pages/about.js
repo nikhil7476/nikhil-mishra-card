@@ -1,12 +1,56 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { FaLinkedin, FaDownload, FaEnvelope } from "react-icons/fa";
-import { SiJavascript, SiReact, SiAngular, SiCss3 } from "react-icons/si";
+import { Container, Row, Col, Tab, Tabs } from "react-bootstrap";
+import { FaLinkedin, FaDownload, FaEnvelope, FaComments, FaUsers, FaChartLine, FaLightbulb, FaClock, FaHandshake, FaBrain, FaPeopleArrows, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { SiJavascript, SiReact, SiCss3, SiHtml5, SiWordpress, SiNextdotjs, SiPhp, SiPython } from "react-icons/si";
 import Link from "next/link";
 import styles from "@/styles/About.module.css";
 import Image from "next/image";
 
 const About = () => {
+
+  const experience = [
+    {
+      title: "Associate Web Developer",
+      company: "Nextupgrad Web Solutions Pvt Ltd, Lucknow",
+      duration: "Dec 2023 - Present",
+      description: "Leading front-end development projects, optimizing UI/UX, and integrating APIs for seamless functionality in React and WordPress."
+    },
+    {
+      title: "Web Developer Intern",
+      company: "Nextupgrad Web Solutions Pvt Ltd, Lucknow",
+      duration: "Aug 2023 - Nov 2023",
+      description: "Designed and developed interactive websites, implemented SEO best practices, and assisted in frontend development for client projects."
+    },
+    {
+      title: "Programmer Analyst Trainee",
+      company: "Cognizant Technology Solutions Pvt Ltd, Pune",
+      duration: "Dec 2022 - Apr 2023",
+      description: "Executed automated tests using Selenium. Collaborated with teams to enhance software performance using SDET frameworks."
+    },
+  ];
+
+  const education = [
+    {
+      degree: "Bachelor of Technology (B.Tech)",
+      institution: "GLA University, Mathura",
+      duration: "2018 - 2022",
+      description: "Graduated with distinction, specializing in web technologies, programming languages, and software engineering principles."
+    },
+    {
+      degree: "Higher Secondary Certificate (12th)",
+      institution: "Gyan Sthali Academy, Auraiya",
+      duration: "2016 - 2018",
+      description: "Excelled in core science subjects, including Physics, Chemistry, and Mathematics, achieving academic excellence."
+    },
+    {
+      degree: "Secondary School Certificate (10th)",
+      institution: "Royal Oxford INTR School, Etawah",
+      duration: "2014 - 2016",
+      description: "Acquired foundational knowledge in science and mathematics, securing a strong academic record."
+    },
+  ];
+
+
   return (
     <div className={styles.aboutPage}>
       <section className={styles.heroSection}>
@@ -49,29 +93,144 @@ const About = () => {
           </Row>
         </Container>
       </section>
+      <section className={styles.timelineSection}>
+        <Container>
+          <h2 className={styles.sectionTitle}>Experience & Education</h2>
+          <Row>
+            <Col md={6} className={styles.timelineColumn}>
+              <h3 className={styles.columnTitle}>
+                <FaBriefcase className={styles.icon} /> Experience
+              </h3>
+              {experience.map((item, index) => (
+                <div key={index} className={styles.timelineItem}>
+                  <div className={styles.timelineHeader}>
+                    <h4>{item.title}</h4>
+                    <span className={styles.timelineDuration}>{item.duration}</span>
+                  </div>
+                  <p className={styles.timelineCompany}>{item.company}</p>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </Col>
+            <Col md={6} className={styles.timelineColumn}>
+              <h3 className={styles.columnTitle}>
+                <FaGraduationCap className={styles.icon} /> Education
+              </h3>
+              {education.map((item, index) => (
+                <div key={index} className={styles.timelineItem}>
+                  <div className={styles.timelineHeader}>
+                    <h4>{item.degree}</h4>
+                    <span className={styles.timelineDuration}>{item.duration}</span>
+                  </div>
+                  <p className={styles.timelineInstitution}>{item.institution}</p>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <section className={styles.skillsSection}>
         <Container>
-          <h2 className={styles.sectionTitle}>Technical Skills</h2>
+          <h2>Skills</h2>
           <Row>
-            <Col className={`col-md-3 ${styles.skillCard}`}>
-              <SiJavascript className={styles.skillIcon} />
-              <h4>JavaScript</h4>
-              <p>ES6+, Async Programming</p>
+            <Col className="col-md-6">
+              <h3>Technical Skills</h3>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiHtml5 className={styles.skillIcon} />
+                  <h4>HTML</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiCss3 className={styles.skillIcon} />
+                  <h4>CSS</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiJavascript className={styles.skillIcon} />
+                  <h4>JavaScript</h4>
+                </Col>
+              </Row>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiReact className={styles.skillIcon} />
+                  <h4>React</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiNextdotjs className={styles.skillIcon} />
+                  <h4>Next.js</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiWordpress className={styles.skillIcon} />
+                  <h4>WordPress</h4>
+                </Col>
+              </Row>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiPhp className={styles.skillIcon} />
+                  <h4>PHP</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <SiPython className={styles.skillIcon} />
+                  <h4>Python</h4>
+                </Col>
+              </Row>
             </Col>
-            <Col className={`col-md-3 ${styles.skillCard}`}>
-              <SiReact className={styles.skillIcon} />
-              <h4>React</h4>
-              <p>Hooks, Redux, Context API</p>
-            </Col>
-            <Col className={`col-md-3 ${styles.skillCard}`}>
-              <SiAngular className={styles.skillIcon} />
-              <h4>Angular</h4>
-              <p>RxJS, Forms, Components</p>
-            </Col>
-            <Col className={`col-md-3 ${styles.skillCard}`}>
-              <SiCss3 className={styles.skillIcon} />
-              <h4>CSS</h4>
-              <p>Animations, Grid, Flexbox</p>
+            <Col className="col-md-6">
+              <h3>Professional Skills</h3>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaComments className={styles.skillIcon} />
+                  </div>
+                  <h4>Communication</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaUsers className={styles.skillIcon} />
+                  </div>
+                  <h4>Teamwork</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaChartLine className={styles.skillIcon} />
+                  </div>
+                  <h4>Leadership</h4>
+                </Col>
+              </Row>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaLightbulb className={styles.skillIcon} />
+                  </div>
+                  <h4>Problem-Solving</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaClock className={styles.skillIcon} />
+                  </div>
+                  <h4>Time Management</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaHandshake className={styles.skillIcon} />
+                  </div>
+                  <h4>Negotiation</h4>
+                </Col>
+              </Row>
+              <Row>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaBrain className={styles.skillIcon} />
+                  </div>
+                  <h4>Critical Thinking</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaPeopleArrows className={styles.skillIcon} />
+                  </div>
+                  <h4>Adaptability</h4>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

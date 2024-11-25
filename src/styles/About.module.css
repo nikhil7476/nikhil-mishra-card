@@ -37,6 +37,77 @@
     margin-bottom: 1rem;
 }
 
+/*Experience & Education CSS*/
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.timelineColumn {
+    margin-bottom: 40px;
+}
+
+.columnTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 3rem;
+}
+
+.timelineItem {
+    background: #141415eb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timelineItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.timelineHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timelineHeader h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.timelineDuration {
+    font-size: 0.9rem;
+    color: #c7c7c7;
+}
+
+.timelineCompany,
+.timelineInstitution {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0b9eac;
+}
+
+.timelineItem p {
+    font-size: 0.95rem;
+    color: #c7c7c7;
+}
+
+
 /* Skills Section */
 .skillsSection {
     text-align: center;
@@ -51,6 +122,10 @@
     font-size: 3rem;
     color: #fff;
     margin-bottom: 1rem;
+}
+
+.skillCard h4 {
+    font-size: 1rem;
 }
 
 /* Contact Section */
