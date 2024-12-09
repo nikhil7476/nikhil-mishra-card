@@ -47,19 +47,6 @@ export default function Home() {
               </div>
             </Col>
           </Row>
-          {/* <Row className="justify-content-center">
-            <Col className="col-md-10">
-              <Row className={styles.caseRow}>
-                <Col className="col-md-6">
-                  <h2>Building an adaptive design system for Archlight</h2>
-                </Col>
-                <Col className="col-md-6">
-                  <p>In this project, I developed a flexible and scalable design system using Next.js for front-end development and Figma for design collaboration.</p>
-                  <Link href="#" title='Read More'>Read Case Study <IoIosArrowForward /></Link>
-                </Col>
-              </Row>
-            </Col>
-          </Row> */}
         </Container>
       </section>
       <section className={styles.blogs}>
