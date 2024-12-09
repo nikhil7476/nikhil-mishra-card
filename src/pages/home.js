@@ -37,10 +37,14 @@ export default function Home() {
             <Col className="col-md-6">
               <ImageSlider />
             </Col>
-            <Col className="col-md-6">
-                  <h2>Building an adaptive design system for Archlight</h2>
-                  <p>In this project, I developed a flexible and scalable design system using Next.js for front-end development and Figma for design collaboration.</p>
-                  <Link href="#" title='Read More'>Read Case Study <IoIosArrowForward /></Link>
+            <Col className={`col-md-6 ${styles.caseRow}`}>
+              <div>
+                <h2>Building an adaptive design system for Archlight</h2>
+              </div>
+              <div>
+                <p>In this project, I developed a flexible and scalable design system using Next.js for front-end development and Figma for design collaboration.</p>
+                <Link href="#" title='Read More'>Read Case Study <IoIosArrowForward /></Link>
+              </div>
             </Col>
           </Row>
           {/* <Row className="justify-content-center">

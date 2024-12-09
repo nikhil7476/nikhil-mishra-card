@@ -42,22 +42,22 @@ const ImageSlider = () => {
       >
         <Carousel.Item>
           <div onClick={() => handleSelect(1)}>
-            <Image className="d-block w-100" src="/us-home.png" alt="Slide 1" title='Slide 1' width={100} height={100} />
+            <Image className="d-block w-100" src="/us-home.png" alt="HomePage" title='HomePage' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(2)}>
-            <Image className="d-block w-100" src="/us-about.png" alt="Slide 2" title='Slide 2' width={100} height={100} />
+            <Image className="d-block w-100" src="/us-about.png" alt="AboutUs" title='AboutUs' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(3)}>
-            <Image className="d-block w-100" src="/us-blog.png" alt="Slide 3" title='Slide 3' width={100} height={100} />
+            <Image className="d-block w-100" src="/us-blog.png" alt="BlogPage" title='BlogPage' width={100} height={100} />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(0)}>
-            <Image className="d-block w-100" src="/us-contact.png" alt="Slide 4" title='Slide 4' width={100} height={100} />
+            <Image className="d-block w-100" src="/us-contact.png" alt="ContactUs" title='ContactUs' width={100} height={100} />
           </div>
         </Carousel.Item>
       </Carousel>

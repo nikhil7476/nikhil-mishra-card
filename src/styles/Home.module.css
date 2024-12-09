@@ -41,6 +41,12 @@
     font-weight: 700;
 }
 
+.caseRow {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
 /*Blog CSS*/
 .blogs h2 {
     font-size: 36px;
