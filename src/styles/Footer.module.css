@@ -1,35 +1,35 @@
 .ftrMain {
-    padding: 20px 0px;
-    border-top: 1px solid #3f3f3f;
+  padding: 20px 0px;
+  border-top: 1px solid #3f3f3f;
 }
 
 .copy {
-    align-content: center;
+  align-content: center;
 }
 
 .copy p {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 .copy p span {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 .socio {
-    display: flex;
-    justify-content: end;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .socio a {
-    color: #fff;
-    font-size: 16px;
+  color: #fff;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 520px) {
-    .socio {
-        align-items: center;
-    }
+  .socio {
+    align-items: center;
+  }
 }
