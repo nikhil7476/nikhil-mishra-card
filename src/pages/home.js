@@ -9,7 +9,6 @@ import ImageSlider from "@/components/ImageSlider";
 import { blogPosts } from "@/utils/dummyData";
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -22,11 +21,30 @@ export default function Home() {
           <Row className={styles.bnrMain}>
             <Col className="col-md-7">
               <h1>Design Engineer & Builder</h1>
-              <p>{"I'm Nikhil, a web developer at Nextupgrad Web Solutions Pvt Ltd, where I craft intuitive user experiences. After hours, I build my own projects."}</p>
-              <Link href="/about" title="About Me" className={styles.abtLnk}><Image src="/nikhil-mishra.jpg" alt="Nikhil_Mishra" title="Nikhil Mishra" width={25} height={25} />About Me <FaArrowRightFromBracket /></Link>
+              <p>
+                {
+                  "I'm Nikhil, a web developer at Nextupgrad Web Solutions Pvt Ltd, where I craft intuitive user experiences. After hours, I build my own projects."
+                }
+              </p>
+              <Link href="/about" title="About Me" className={styles.abtLnk}>
+                <Image
+                  src="/nikhil-mishra.jpg"
+                  alt="Nikhil_Mishra"
+                  title="Nikhil Mishra"
+                  width={25}
+                  height={25}
+                />
+                About Me <FaArrowRightFromBracket />
+              </Link>
             </Col>
             <Col className={`col-md-5 ${styles.nmLogo}`}>
-              <Image src="/nikhil-logo.jpeg" alt="Nikhil-Logo" title="Nikhil Mishra" width={100} height={100} />
+              <Image
+                src="/nikhil-logo.jpeg"
+                alt="Nikhil-Logo"
+                title="Nikhil Mishra"
+                width={100}
+                height={100}
+              />
             </Col>
           </Row>
         </Container>
@@ -42,8 +60,14 @@ export default function Home() {
                 <h2>Building an adaptive design system for Archlight</h2>
               </div>
               <div>
-                <p>In this project, I developed a flexible and scalable design system using Next.js for front-end development and Figma for design collaboration.</p>
-                <Link href="#" title='Read More'>Read Case Study <IoIosArrowForward /></Link>
+                <p>
+                  In this project, I developed a flexible and scalable design
+                  system using Next.js for front-end development and Figma for
+                  design collaboration.
+                </p>
+                <Link href="#" title="Read More">
+                  Read Case Study <IoIosArrowForward />
+                </Link>
               </div>
             </Col>
           </Row>
@@ -53,11 +77,18 @@ export default function Home() {
         <Container>
           <Row className={styles.blogRow}>
             <Col className="col-md-4">
-              <h2>Latest from<br />the blog</h2>
+              <h2>
+                Latest from
+                <br />
+                the blog
+              </h2>
             </Col>
             {blogPosts.slice(0, 2).map((post) => (
               <Col key={post.id} className="col-md-4">
-                <Link href={`/blog/${encodeURIComponent(post.slug)}`} title={post.title}>
+                <Link
+                  href={`/blog/${encodeURIComponent(post.slug)}`}
+                  title={post.title}
+                >
                   <h3>{post.title}</h3>
                   <span>{post.date}</span>
                   <p>{post.tag}</p>
@@ -72,7 +103,11 @@ export default function Home() {
           <Row className="justify-content-center">
             <Col className={`col-md-7 ${styles.news}`}>
               <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
-              <p>I occasionally write about design, technology, and share<br />thoughts on the intersection of creativity & engineering.</p>
+              <p>
+                I occasionally write about design, technology, and share
+                <br />
+                thoughts on the intersection of creativity & engineering.
+              </p>
               <Form className={styles.signupForm}>
                 <InputGroup>
                   <Form.Control
@@ -82,7 +117,11 @@ export default function Home() {
                     className={styles.emailInput}
                     required
                   />
-                  <Button variant="light" type="submit" className={styles.signupButton}>
+                  <Button
+                    variant="light"
+                    type="submit"
+                    className={styles.signupButton}
+                  >
                     Sign up
                   </Button>
                 </InputGroup>

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '@/styles/slider.module.css';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "@/styles/slider.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const ImageSlider = () => {
   const [index, setIndex] = useState(0);
@@ -37,27 +37,55 @@ const ImageSlider = () => {
         indicators={false}
         controls={false} // Hides the navigation arrows
         interval={null}
-        wrap={true} 
+        wrap={true}
         className={styles.slides}
       >
         <Carousel.Item>
           <div onClick={() => handleSelect(1)}>
-            <Image className="d-block w-100" src="/us-home.png" alt="HomePage" title='HomePage' width={100} height={100} />
+            <Image
+              className="d-block w-100"
+              src="/us-home.png"
+              alt="HomePage"
+              title="HomePage"
+              width={100}
+              height={100}
+            />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(2)}>
-            <Image className="d-block w-100" src="/us-about.png" alt="AboutUs" title='AboutUs' width={100} height={100} />
+            <Image
+              className="d-block w-100"
+              src="/us-about.png"
+              alt="AboutUs"
+              title="AboutUs"
+              width={100}
+              height={100}
+            />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(3)}>
-            <Image className="d-block w-100" src="/us-blog.png" alt="BlogPage" title='BlogPage' width={100} height={100} />
+            <Image
+              className="d-block w-100"
+              src="/us-blog.png"
+              alt="BlogPage"
+              title="BlogPage"
+              width={100}
+              height={100}
+            />
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div onClick={() => handleSelect(0)}>
-            <Image className="d-block w-100" src="/us-contact.png" alt="ContactUs" title='ContactUs' width={100} height={100} />
+            <Image
+              className="d-block w-100"
+              src="/us-contact.png"
+              alt="ContactUs"
+              title="ContactUs"
+              width={100}
+              height={100}
+            />
           </div>
         </Carousel.Item>
       </Carousel>
@@ -67,10 +95,12 @@ const ImageSlider = () => {
         {[0, 1, 2, 3].map((_, idx) => (
           <div
             key={idx}
-            className={`${styles.paginationLine} ${index === idx ? styles.activePaginationLine : ''}`}
+            className={`${styles.paginationLine} ${
+              index === idx ? styles.activePaginationLine : ""
+            }`}
             style={{
-              width: index === idx ? `${progress}%` : '100%',
-              backgroundColor: index === idx ? '#007bff' : '#ddd',
+              width: index === idx ? `${progress}%` : "100%",
+              backgroundColor: index === idx ? "#007bff" : "#ddd",
             }}
             onClick={() => handleSelect(idx)}
           ></div>
@@ -81,4 +111,3 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
-

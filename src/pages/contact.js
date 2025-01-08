@@ -21,14 +21,29 @@ export default function Contact() {
               <div className={styles.contactInfo}>
                 <FaEnvelope size={30} />
                 <h5>Email</h5>
-                <p><Link href="mailto:nikhil9027917476@gmail.com<" title="nikhil9027917476@gmail.com<">nikhil9027917476@gmail.com</Link></p>
+                <p>
+                  <Link
+                    href="mailto:nikhil9027917476@gmail.com<"
+                    title="nikhil9027917476@gmail.com<"
+                  >
+                    nikhil9027917476@gmail.com
+                  </Link>
+                </p>
               </div>
             </Col>
             <Col md={4}>
               <div className={styles.contactInfo}>
                 <FaPhoneAlt size={30} />
                 <h5>Phone</h5>
-                <p><Link href="tel:+91-9027917476" title="+91-9027917476">+91-9027917476</Link>, <Link href="tel:+91-7900677476" title="+91-7900677476">+91-7900677476</Link></p>
+                <p>
+                  <Link href="tel:+91-9027917476" title="+91-9027917476">
+                    +91-9027917476
+                  </Link>
+                  ,{" "}
+                  <Link href="tel:+91-7900677476" title="+91-7900677476">
+                    +91-7900677476
+                  </Link>
+                </p>
               </div>
             </Col>
             <Col md={4}>
@@ -42,7 +57,11 @@ export default function Contact() {
           <Row className={styles.cMap}>
             <Col md={6}>
               <h2>Contact Us</h2>
-              <p>{"Feel free to reach out to us for any inquiries. We're here to help"}</p>
+              <p>
+                {
+                  "Feel free to reach out to us for any inquiries. We're here to help"
+                }
+              </p>
               <Form className={styles.form}>
                 <Form.Group controlId="formName">
                   <Form.Label>Name</Form.Label>
@@ -72,7 +91,11 @@ export default function Contact() {
                     className={styles.formControl}
                   />
                 </Form.Group>
-                <Button variant="primary" type="submit" className={styles.submitButton}>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className={styles.submitButton}
+                >
                   Send Message <FaArrowRightFromBracket />
                 </Button>
               </Form>
@@ -86,8 +109,8 @@ export default function Contact() {
                   height="100%"
                   allowFullScreen=""
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </Col>
           </Row>

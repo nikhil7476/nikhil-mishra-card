@@ -1,31 +1,56 @@
 import React from "react";
 import { Container, Row, Col, Tab, Tabs } from "react-bootstrap";
-import { FaLinkedin, FaDownload, FaEnvelope, FaComments, FaUsers, FaChartLine, FaLightbulb, FaClock, FaHandshake, FaBrain, FaPeopleArrows, FaBriefcase, FaGraduationCap } from "react-icons/fa";
-import { SiJavascript, SiReact, SiCss3, SiHtml5, SiWordpress, SiNextdotjs, SiPhp, SiPython } from "react-icons/si";
+import {
+  FaLinkedin,
+  FaDownload,
+  FaEnvelope,
+  FaComments,
+  FaUsers,
+  FaChartLine,
+  FaLightbulb,
+  FaClock,
+  FaHandshake,
+  FaBrain,
+  FaPeopleArrows,
+  FaBriefcase,
+  FaGraduationCap,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiReact,
+  SiCss3,
+  SiHtml5,
+  SiWordpress,
+  SiNextdotjs,
+  SiPhp,
+  SiPython,
+} from "react-icons/si";
 import Link from "next/link";
 import styles from "@/styles/About.module.css";
 import Image from "next/image";
 
 const About = () => {
-
   const experience = [
     {
       title: "Associate Web Developer",
       company: "Nextupgrad Web Solutions Pvt Ltd, Lucknow",
       duration: "Dec 2023 - Present",
-      description: "Leading front-end development projects, optimizing UI/UX, and integrating APIs for seamless functionality in React and WordPress."
+      description:
+        "Leading front-end development projects, optimizing UI/UX, and integrating APIs for seamless functionality in React and WordPress.",
     },
     {
       title: "Web Developer Intern",
       company: "Nextupgrad Web Solutions Pvt Ltd, Lucknow",
       duration: "Aug 2023 - Nov 2023",
-      description: "Designed and developed interactive websites, implemented SEO best practices, and assisted in frontend development for client projects."
+      description:
+        "Designed and developed interactive websites, implemented SEO best practices, and assisted in frontend development for client projects.",
     },
     {
       title: "Programmer Analyst Trainee",
       company: "Cognizant Technology Solutions Pvt Ltd, Pune",
       duration: "Dec 2022 - Apr 2023",
-      description: "Executed automated tests using Selenium. Collaborated with teams to enhance software performance using SDET frameworks."
+      description:
+        "Executed automated tests using Selenium. Collaborated with teams to enhance software performance using SDET frameworks.",
     },
   ];
 
@@ -34,22 +59,24 @@ const About = () => {
       degree: "Bachelor of Technology (B.Tech)",
       institution: "GLA University, Mathura",
       duration: "2018 - 2022",
-      description: "Graduated with distinction, specializing in web technologies, programming languages, and software engineering principles."
+      description:
+        "Graduated with distinction, specializing in web technologies, programming languages, and software engineering principles.",
     },
     {
       degree: "Higher Secondary Certificate (12th)",
       institution: "Gyan Sthali Academy, Auraiya",
       duration: "2016 - 2018",
-      description: "Excelled in core science subjects, including Physics, Chemistry, and Mathematics, achieving academic excellence."
+      description:
+        "Excelled in core science subjects, including Physics, Chemistry, and Mathematics, achieving academic excellence.",
     },
     {
       degree: "Secondary School Certificate (10th)",
       institution: "Royal Oxford INTR School, Etawah",
       duration: "2014 - 2016",
-      description: "Acquired foundational knowledge in science and mathematics, securing a strong academic record."
+      description:
+        "Acquired foundational knowledge in science and mathematics, securing a strong academic record.",
     },
   ];
-
 
   return (
     <div className={styles.aboutPage}>
@@ -60,10 +87,18 @@ const About = () => {
             Front-End Developer | Creator of Interactive Digital Experiences
           </p>
           <div>
-            <Link className={styles.heroButton} href="/Nikhil-Mishra-Resume.pdf" target="_blank">
+            <Link
+              className={styles.heroButton}
+              href="/Nikhil-Mishra-Resume.pdf"
+              target="_blank"
+            >
               <FaDownload className="me-2" /> Download Resume
             </Link>
-            <Link className={styles.heroButton} href="https://www.linkedin.com/in/nikhil-mishra-664672180/" target="_blank">
+            <Link
+              className={styles.heroButton}
+              href="https://www.linkedin.com/in/nikhil-mishra-664672180/"
+              target="_blank"
+            >
               <FaLinkedin className="me-2" /> LinkedIn
             </Link>
           </div>
@@ -73,7 +108,14 @@ const About = () => {
         <Container>
           <Row className={styles.abtRow}>
             <Col className="col-md-4">
-              <Image src="/nikhil-mishra.jpg" alt="Nikhil Mishra" title="Nikhil Mishra" className={styles.profileImage} width={100} height={100} />
+              <Image
+                src="/nikhil-mishra.jpg"
+                alt="Nikhil Mishra"
+                title="Nikhil Mishra"
+                className={styles.profileImage}
+                width={100}
+                height={100}
+              />
             </Col>
             <Col className="col-md-8">
               <h2 className={styles.sectionTitle}>About Me</h2>
@@ -105,7 +147,9 @@ const About = () => {
                 <div key={index} className={styles.timelineItem}>
                   <div className={styles.timelineHeader}>
                     <h4>{item.title}</h4>
-                    <span className={styles.timelineDuration}>{item.duration}</span>
+                    <span className={styles.timelineDuration}>
+                      {item.duration}
+                    </span>
                   </div>
                   <p className={styles.timelineCompany}>{item.company}</p>
                   <p>{item.description}</p>
@@ -120,9 +164,13 @@ const About = () => {
                 <div key={index} className={styles.timelineItem}>
                   <div className={styles.timelineHeader}>
                     <h4>{item.degree}</h4>
-                    <span className={styles.timelineDuration}>{item.duration}</span>
+                    <span className={styles.timelineDuration}>
+                      {item.duration}
+                    </span>
                   </div>
-                  <p className={styles.timelineInstitution}>{item.institution}</p>
+                  <p className={styles.timelineInstitution}>
+                    {item.institution}
+                  </p>
                   <p>{item.description}</p>
                 </div>
               ))}
@@ -240,7 +288,10 @@ const About = () => {
             Ready to collaborate or discuss exciting ideas? Let’s connect and
             create something amazing!
           </p>
-          <Link className={styles.heroButton} href="mailto:nikhil9027917476@gmail.com">
+          <Link
+            className={styles.heroButton}
+            href="mailto:nikhil9027917476@gmail.com"
+          >
             <FaEnvelope className="me-2" /> Contact Me
           </Link>
         </Container>

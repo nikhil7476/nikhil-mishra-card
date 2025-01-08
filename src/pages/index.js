@@ -20,15 +20,45 @@ export default function Nikhil() {
           <Row className={styles.cardContainer}>
             <Col className={`col-md-7 ${styles.descripcion}`}>
               <h1>Nikhil Mishra</h1>
-              <p>{"Hi there ! I'm Nikhil, Front-End developer with expertise in HTML, CSS, JavaScript, and React. Skilled in crafting user-friendly web & mobile interfaces with React Native. Strong team collaborator with excellent interpersonal skills. Ready to bring fresh ideas to dynamic projects!"}</p>
-              <Link href="/home" title="Website" className={styles.webSite}>Visit to My Portfolio <FaGlobe /></Link>
+              <p>
+                {
+                  "Hi there ! I'm Nikhil, Front-End developer with expertise in HTML, CSS, JavaScript, and React. Skilled in crafting user-friendly web & mobile interfaces with React Native. Strong team collaborator with excellent interpersonal skills. Ready to bring fresh ideas to dynamic projects!"
+                }
+              </p>
+              <Link href="/home" title="Website" className={styles.webSite}>
+                Visit to My Portfolio <FaGlobe />
+              </Link>
             </Col>
             <Col className={`col-md-5 ${styles.image}`}>
-              <Image src="/nikhil-logo.jpeg" alt="Nikhil-Mishra" title="Nikhil Mishra" width={100} height={100} />
+              <Image
+                src="/nikhil-logo.jpeg"
+                alt="Nikhil-Mishra"
+                title="Nikhil Mishra"
+                width={100}
+                height={100}
+              />
               <div className={styles.icons}>
-                <Link href="https://www.linkedin.com/in/nikhil-mishra-664672180/" title="LinkedIn" target="_blank"><BsLinkedin /></Link>
-                <Link href="https://www.github.com/nikhil7476/" title="GitHub" target="_blank"><FaGithub /></Link>
-                <Link href="/Nikhil-Mishra-Resume.pdf" title="Resume" target="_blank"><LuFileDown /></Link>
+                <Link
+                  href="https://www.linkedin.com/in/nikhil-mishra-664672180/"
+                  title="LinkedIn"
+                  target="_blank"
+                >
+                  <BsLinkedin />
+                </Link>
+                <Link
+                  href="https://www.github.com/nikhil7476/"
+                  title="GitHub"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </Link>
+                <Link
+                  href="/Nikhil-Mishra-Resume.pdf"
+                  title="Resume"
+                  target="_blank"
+                >
+                  <LuFileDown />
+                </Link>
               </div>
             </Col>
           </Row>

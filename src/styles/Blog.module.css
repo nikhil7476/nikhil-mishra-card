@@ -1,127 +1,126 @@
 .blogList {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .blogItem {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .blogItem h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .blogItem a {
-    color: blue;
-    text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
 
 .container {
-    padding: 120px 0px 60px 0px;
-    color: #fff;
-    max-width: 800px;
-    margin: auto;
+  padding: 120px 0px 60px 0px;
+  color: #fff;
+  max-width: 800px;
+  margin: auto;
 }
 
 .container h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .latestPost {
-    display: flex;
-    margin-bottom: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 .featuredImage {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 1.5rem;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1.5rem;
 }
 
 .latestPostContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .postTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 
 .date,
 .tag {
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 0.9rem;
-    color: #aaa;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
 .tag {
-    padding: 0.2rem 0.5rem;
-    border: 1px solid #aaa;
-    width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #aaa;
+  width: fit-content;
 }
 
 .otherPosts {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .postCard {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .postCard .postTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 
 .postCard .date,
 .postCard .tag {
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 0.9rem;
-    color: #aaa;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
 .postCard .tag {
-    padding: 0.2rem 0.5rem;
-    border: 1px solid #aaa;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #aaa;
 }
-
 
 /*Blog Single Page CSS*/
 
 .blogSingle {
-    padding: 120px 0px 60px 0px;
+  padding: 120px 0px 60px 0px;
 }
 
 .blogSingle a,
 .blogSingle a:active,
 .blogSingle a:focus {
-    padding: 5px 10px;
-    border: 1px solid #3f3f3f !important;
+  padding: 5px 10px;
+  border: 1px solid #3f3f3f !important;
 }
 
 .blogSingle img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .blogSingle p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .blogMeta {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
 }

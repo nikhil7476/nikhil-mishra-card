@@ -1,144 +1,143 @@
 .cardMain {
-    background-image: url("/card-bg.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 0;
+  background-image: url("/card-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 25px;
 }
 
 .cardContainer {
-    display: flex;
-    width: 650px;
-    padding: 20px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #3f3f3f;
-    border-radius: 0px;
-    box-shadow: 1px 7px 10px 2px #00000026;
+  display: flex;
+  width: 650px;
+  padding: 20px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #3f3f3f;
+  border-radius: 0px;
+  box-shadow: 1px 7px 10px 2px #00000026;
 }
 
 .image,
 .descripcion {
-    text-align: left;
-    color: #fff;
+  text-align: left;
+  color: #fff;
 }
 
 .descripcion {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .descripcion h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .descripcion p {
-    font-weight: 300;
-    font-size: 17px;
-    text-align: justify;
+  font-weight: 300;
+  font-size: 17px;
+  text-align: justify;
 }
 
 .descripcion .webSite {
-    color: #fff;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    gap: 5px;
-    align-items: center;
-    border: 1px solid #3f3f3f;
-    box-shadow: inset 0 0 #0000;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #3f3f3f;
+  box-shadow: inset 0 0 #0000;
 }
 
 .image .icons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .image .icons a {
-    color: #fff;
-    font-size: 30px;
-    transition: .3s;
+  color: #fff;
+  font-size: 30px;
+  transition: 0.3s;
 }
 
 .image .icons a:hover {
-    transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px) scale(1.05);
 }
 
 .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .image img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #3f3f3f;
-    border-radius: 0;
-    text-align: center;
-    object-fit: cover;
-    object-position: center;
-    transition: .3s;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #3f3f3f;
+  border-radius: 0;
+  text-align: center;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
 }
 
 .image img:hover {
-    transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px) scale(1.05);
 }
 
 @media (max-width: 576px) {
-    .main {
-        height: 100vh;
-        padding: 0 15px;
-    }
+  .main {
+    height: 100vh;
+    padding: 0 15px;
+  }
 
-    .cardContainer {
-        background-color: rgba(0, 0, 0, 0.65);
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
+  .cardContainer {
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 
-    .descripcion {
-        padding: 10px 20px 18px;
-    }
+  .descripcion {
+    padding: 10px 20px 18px;
+  }
 
-    .descripcion h1 {
-        font-weight: 400;
-        font-size: 25px;
-    }
+  .descripcion h1 {
+    font-weight: 400;
+    font-size: 25px;
+  }
 
-    .descripcion p {
-        font-weight: 300;
-        font-size: 15px;
-    }
+  .descripcion p {
+    font-weight: 300;
+    font-size: 15px;
+  }
 
-    .image .icons {
-        justify-content: center;
-        gap: 30px;
-    }
+  .image .icons {
+    justify-content: center;
+    gap: 30px;
+  }
 
-    .image {
-        padding: 15px 0 0;
-    }
+  .image {
+    padding: 15px 0 0;
+  }
 
-    .image img {
-        width: 90px;
-        height: 90px;
-    }
-
+  .image img {
+    width: 90px;
+    height: 90px;
+  }
 }
