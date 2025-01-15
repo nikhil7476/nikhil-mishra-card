@@ -18,8 +18,8 @@ const BlogPage = () => {
           src={latestPost.image}
           alt={latestPost.title}
           className={styles.featuredImage}
-          width={100}
-          height={100}
+          width={1200}
+          height={750}
         />
         <div className={styles.latestPostContent}>
           <Link href={`/blog/${encodeURIComponent(latestPost.slug)}`}>

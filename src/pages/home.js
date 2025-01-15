@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               <Link href="/about" title="About Me" className={styles.abtLnk}>
                 <Image
-                  src="/nikhil-mishra.jpg"
+                  src="/nikhil-logo.jpeg"
                   alt="Nikhil_Mishra"
                   title="Nikhil Mishra"
                   width={25}
@@ -42,8 +42,8 @@ export default function Home() {
                 src="/nikhil-logo.jpeg"
                 alt="Nikhil-Logo"
                 title="Nikhil Mishra"
-                width={100}
-                height={100}
+                width={460}
+                height={460}
               />
             </Col>
           </Row>

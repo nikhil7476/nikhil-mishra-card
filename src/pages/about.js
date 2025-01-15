@@ -109,12 +109,12 @@ const About = () => {
           <Row className={styles.abtRow}>
             <Col className="col-md-4">
               <Image
-                src="/nikhil-mishra.jpg"
+                src="/nikhil-logo.jpeg"
                 alt="Nikhil Mishra"
                 title="Nikhil Mishra"
                 className={styles.profileImage}
-                width={100}
-                height={100}
+                width={460}
+                height={460}
               />
             </Col>
             <Col className="col-md-8">

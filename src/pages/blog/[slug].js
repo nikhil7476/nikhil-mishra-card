@@ -29,8 +29,8 @@ export default function BlogPost() {
                 src={post.image}
                 alt={post.title}
                 title={post.title}
-                width={100}
-                height={100}
+                width={1200}
+                height={750}
               />
               <h1>{post.title}</h1>
               <div className={styles.blogMeta}>

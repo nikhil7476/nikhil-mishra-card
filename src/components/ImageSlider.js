@@ -47,8 +47,8 @@ const ImageSlider = () => {
               src="/us-home.png"
               alt="HomePage"
               title="HomePage"
-              width={100}
-              height={100}
+              width={1366}
+              height={768}
             />
           </div>
         </Carousel.Item>
@@ -59,8 +59,8 @@ const ImageSlider = () => {
               src="/us-about.png"
               alt="AboutUs"
               title="AboutUs"
-              width={100}
-              height={100}
+              width={1366}
+              height={768}
             />
           </div>
         </Carousel.Item>
@@ -71,8 +71,8 @@ const ImageSlider = () => {
               src="/us-blog.png"
               alt="BlogPage"
               title="BlogPage"
-              width={100}
-              height={100}
+              width={1366}
+              height={768}
             />
           </div>
         </Carousel.Item>
@@ -83,8 +83,8 @@ const ImageSlider = () => {
               src="/us-contact.png"
               alt="ContactUs"
               title="ContactUs"
-              width={100}
-              height={100}
+              width={1366}
+              height={768}
             />
           </div>
         </Carousel.Item>
