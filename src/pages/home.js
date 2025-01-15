@@ -51,7 +51,7 @@ export default function Home() {
       </section>
       <section className={styles.caseStudy}>
         <Container>
-          <Row>
+          <Row className={styles.caseStud}>
             <Col className="col-md-6">
               <ImageSlider />
             </Col>
