@@ -30,13 +30,15 @@ export default function Nikhil() {
               </Link>
             </Col>
             <Col className={`col-md-5 ${styles.image}`}>
+            <Link href="/home" title="Go To Website">
               <Image
                 src="/nikhil-logo.jpeg"
                 alt="Nikhil-Mishra"
                 title="Nikhil Mishra"
-                width={100}
-                height={100}
+                width={460}
+                height={460}
               />
+              </Link>
               <div className={styles.icons}>
                 <Link
                   href="https://www.linkedin.com/in/nikhil-mishra-664672180/"
