@@ -138,4 +138,9 @@
     flex-direction: column;
     gap: 20px;
   }
+  .skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }

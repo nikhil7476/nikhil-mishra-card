@@ -14,6 +14,8 @@ import {
   FaPeopleArrows,
   FaBriefcase,
   FaGraduationCap,
+  FaNodeJs,
+  FaPalette,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -181,7 +183,7 @@ const About = () => {
       <section className={styles.skillsSection}>
         <Container>
           <h2>Technical & Professional Skills</h2>
-          <Row>
+          <Row className={styles.skills}>
             <Col className="col-md-6">
               <Row>
                 <Col className={`col-md-4 ${styles.skillCard}`}>
@@ -219,6 +221,10 @@ const About = () => {
                 <Col className={`col-md-4 ${styles.skillCard}`}>
                   <SiPython className={styles.skillIcon} />
                   <h4>Python</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <FaNodeJs className={styles.skillIcon} />
+                  <h4>Node.js</h4>
                 </Col>
               </Row>
             </Col>
@@ -275,6 +281,12 @@ const About = () => {
                     <FaPeopleArrows className={styles.skillIcon} />
                   </div>
                   <h4>Adaptability</h4>
+                </Col>
+                <Col className={`col-md-4 ${styles.skillCard}`}>
+                  <div className={styles.skillIconWrapper}>
+                    <FaPalette className={styles.skillIcon} />
+                  </div>
+                  <h4>Creativity</h4>
                 </Col>
               </Row>
             </Col>
