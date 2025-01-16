@@ -66,7 +66,11 @@ export default function Contact() {
           </Row>
           <Row className="mt-5">
             <Col>
-              <h2 className="mb-5">Frequently Asked Questions</h2>
+              <h2>Frequently Asked Questions</h2>
+              <p className="mb-5">
+                Find answers to common questions about my services, skills, and
+                approach to web development.
+              </p>
               <FAQs />
             </Col>
           </Row>
