@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import { Col, Container, Row, Form, Button, InputGroup } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import styles from "@/styles/Home.module.css";
 import ImageSlider from "@/components/ImageSlider";
@@ -102,30 +103,18 @@ export default function Home() {
         <Container>
           <Row className="justify-content-center">
             <Col className={`col-md-7 ${styles.news}`}>
-              <h2>{"Subscribe to Nikhil's Newsletter"}</h2>
+              <h2>{"Contact to Nikhil's Mailbox"}</h2>
               <p>
                 I occasionally write about design, technology, and share
                 <br />
                 thoughts on the intersection of creativity & engineering.
               </p>
-              <Form className={styles.signupForm}>
-                <InputGroup>
-                  <Form.Control
-                    type="email"
-                    placeholder="Email Address"
-                    aria-label="Email"
-                    className={styles.emailInput}
-                    required
-                  />
-                  <Button
-                    variant="light"
-                    type="submit"
-                    className={styles.signupButton}
-                  >
-                    Sign up
-                  </Button>
-                </InputGroup>
-              </Form>
+              <Link
+                className={styles.heroButton}
+                href="mailto:nikhil9027917476@gmail.com"
+              >
+                <FaEnvelope className="me-2" /> Contact Me
+              </Link>
             </Col>
           </Row>
         </Container>
