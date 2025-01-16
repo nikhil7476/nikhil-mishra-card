@@ -17,7 +17,7 @@ export default function Contact() {
       <section className={styles.contact}>
         <Container>
           <Row className={styles.cMap}>
-            <Col md={6}>
+            <Col>
               <h2>Contact Us</h2>
               <p>
                 {
@@ -25,7 +25,7 @@ export default function Contact() {
                 }
               </p>
               <Row className="mt-5">
-                <Col>
+                <Col md={4}>
                   <div className={styles.contactInfo}>
                     <FaEnvelope size={30} />
                     <h5>Email</h5>
@@ -39,9 +39,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </Col>
-              </Row>
-              <Row>
-                <Col md={6}>
+                <Col md={4}>
                   <div className={styles.contactInfo}>
                     <FaPhoneAlt size={30} />
                     <h5>Phone</h5>
@@ -56,7 +54,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={4}>
                   <div className={styles.contactInfo}>
                     <FaMapMarkerAlt size={30} />
                     <h5>Address</h5>
@@ -65,8 +63,10 @@ export default function Contact() {
                 </Col>
               </Row>
             </Col>
-            <Col md={6}>
-              <h2>Frequently Asked Questions</h2>
+          </Row>
+          <Row className="mt-5">
+            <Col>
+              <h2 className="mb-5">Frequently Asked Questions</h2>
               <FAQs />
             </Col>
           </Row>

@@ -1,5 +1,5 @@
 .faqItem {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #3f3f3f;
   margin-bottom: 10px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .faqQuestion h3 {
-font-size: 20px;
+  font-size: 20px;
 }
 
 .faqAnswer {
@@ -22,5 +22,5 @@ font-size: 20px;
 }
 
 .faqAnswer p {
-    font-size: 16px;
+  font-size: 16px;
 }
